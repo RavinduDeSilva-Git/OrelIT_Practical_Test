@@ -1,0 +1,41 @@
+﻿@{
+
+    ViewData["Title"] = "Allowance Upload";
+
+}
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+<script src="~/jquery/jquery.min.js"></script>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Allowance" asp-action="Index">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload CSV File Here !</p>
+            <input class="form-control" accept=".csv" name="files" type="file" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2">
+                <input class="btn btn-success" style="margin-left: 15px;"type="submit" value="Upload" />
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2"  style="font-weight:bold;padding-top:10px;" >
+                <p style="color:green">@ViewBag.Message</p>
+                <p style="color:red">@ViewBag.Error</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
+
+
+
+
